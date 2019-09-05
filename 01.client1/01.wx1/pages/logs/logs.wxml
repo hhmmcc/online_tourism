@@ -36,7 +36,7 @@
 
   <!-- 热议话题 -->
   <view class="hotTopic">
-    <view class="hotIcon">热议话题</view>
+    <view class="hotIcon">热议话题1</view>
     <view class="barrage">
       <image src="../imgs/弹幕开.png"></image>
       弹幕</view>
