@@ -1,0 +1,205 @@
+/* pages/page3/page3.wxss */
+
+.body1{
+  width:750rpx;
+  height:500rpx;
+  background: #F7F7F7; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.body1 .content{
+  width:700rpx;
+  height:400rpx;
+  background:#E1B34C; 
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contentItem1{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+.contentItem1 image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+.contentItem{
+  width: 120rpx;
+  height: 40rpx;
+  border: 2rpx solid;
+  margin-top: -150rpx;
+  margin-left: 500rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: white;
+}
+.contentItem2{
+  width: 180rpx;
+  height: 50rpx;
+
+  margin-top: 90rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: white;
+  font-size: 35rpx;
+}
+.contentItem3{
+  width: 460rpx;
+  height: 120rpx;
+ 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contentItem3 .item{
+  width: 130rpx;
+  height: 120rpx;
+
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contentItem3 .item1{
+  width: 5rpx;
+  height: 100rpx;
+  background: white; 
+}
+.item view{
+  font-size: 30rpx;
+  color: white;
+}
+.body2{
+  width: 750rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.content1{
+  width: 200rpx;
+  height: 120rpx;
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content2{
+  width: 50rpx;
+  height: 120rpx;
+  margin-left: 280rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.content1 .img{
+  width: 50rpx;
+  height: 50rpx;
+  color: #717171;
+}
+.content1 .item2{
+  font-size: 35rpx;
+  color: #444444;
+}
+  
+
+.content2 .img{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 31rpx;
+  color: #717171;
+}
+.body3{
+  width: 750rpx;
+  height: 970rpx;
+  background: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+.body3 .content{
+  width: 750rpx;
+  height: 300rpx;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.body3 .item1{
+  margin-left: 60rpx;
+  color: #8A8A8A;
+}
+.body3 .item2{
+  width: 690rpx;
+  height: 4rpx;
+  background:#8A8A8A; 
+  margin-left: 60rpx;
+}
+.body3 .item3{
+  width: 750rpx;
+  height:180rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.item3 .img{
+  width: 90rpx;
+  height:90rpx;
+}
+.text{
+  font-size: 30rpx;
+  color: #444444;
+}
+.text1{
+  font-size: 30rpx;
+  margin-left: -48rpx;
+  margin-top: 22rpx;
+  color:#444444;
+}
+.text2{
+  font-size: 30rpx;
+  margin-left: 80rpx;
+  color: #444444;
+}
+
+.item3 .img1{
+  width: 60rpx;
+  height:60rpx;
+  margin-left: -20rpx;
+  margin-top: 10rpx;
+}
+.item4{
+  width: 750rpx;
+  height:180rpx;
+
+  display: flex;
+  flex-direction: row;
+
+}
+.item4 .img{
+  width: 80rpx;
+  height:80rpx;
+  margin-left: 70rpx;
+}
+.item4 .text{
+  font-size: 30rpx;
+  margin-left: 60rpx;
+}
+.img2{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 85rpx;
+}

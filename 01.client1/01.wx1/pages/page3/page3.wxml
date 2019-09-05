@@ -1,0 +1,79 @@
+ <view class="body1">
+  <view class="content">
+   <view class="contentItem1">
+    <image src="../imgs/img07.jpg"></image>
+   </view>
+   <view class="contentItem" bindtap="toPersonalCenter">个人中心</view>
+   <view class="contentItem2">deft</view>
+   <view class="contentItem3">
+    <view class="item">
+     <view  bindtap="toPersonalCenter">微帖</view>
+     <view>66</view>
+    </view>
+    <view class="item1"></view>
+    <view class="item">
+     <view bindtap="toWallet">钱包</view>
+     <view>￥998</view>
+    </view>
+   </view>
+  </view>
+ </view>
+ <view class="body2">
+  <view class="content1">
+   <image class="img" src="../imgs/img08.png"></image>
+   <view class="item2">我的消息</view>
+  </view>
+  <view class="content2">
+   <image class="img" src="../imgs/img09.png"></image>
+  </view>
+ </view>
+ <view class="body3">
+  <view class="content">
+   <view class="item1">我的</view>
+   <view class="item2"></view>
+   <view class="item3">
+    <view>
+     <image class="img"src="../imgs/img10.png"></image>
+     <view class="text">我的评论</view>
+    </view>
+    <view>
+     <image class="img1"src="../imgs/img11.png"></image>
+     <view class="text1">我的点赞</view>
+    </view>
+    <view>
+     <image class="img1"src="../imgs/img12.png"></image>
+     <view class="text1">我的收藏</view>
+    </view>
+    <view>
+     <image class="img1"src="../imgs/img13.png"></image>
+     <view class="text1">我的关注</view>
+    </view>
+   </view>
+  </view>
+  <view class="content">
+   <view class="item1">发现</view>
+   <view class="item2"></view>
+   <view class="item4">
+    <view>
+     <image class="img"src="../imgs/img14.png"></image>
+     <view class="text">社区活动</view>
+    </view>
+   </view>
+  </view>
+  <view class="content">
+   <view class="item1">设置</view>
+   <view class="item2"></view>
+   <view class="item4">
+    <view>
+     <image class="img2"src="../imgs/img15.png"></image>
+     <view class="text">基础设置</view>
+    </view>
+     <view>
+     <image class="img2"src="../imgs/img16.png"></image>
+     <view class="text2">投诉</view>
+    </view>
+   </view>
+  </view>
+ </view>
+
+

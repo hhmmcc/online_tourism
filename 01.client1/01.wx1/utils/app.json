@@ -1,13 +1,11 @@
 {
   "pages": [   
-        "pages/page3/page3",
-      "pages/record/record",
-      "pages/footprint/footprint",
-
+    "pages/page3/page3",
     "pages/toWallet/toWallet",
     "pages/toPersonalCenter/toPersonalCenter",
     "pages/index/index",
     "pages/logs/logs"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
