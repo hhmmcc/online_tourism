@@ -42,6 +42,7 @@
   color: yellow;
    font-size: 34rpx;
 }
+/* 打卡内容层叠样式 */
 .recordView .viewContent{
   width: 100%;
   display: flex;
@@ -53,7 +54,7 @@
   height: 640rpx;
   margin-top: 20rpx;
   background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567599801444&di=80e4e5272f987613606c50ffae3256cb&imgtype=0&src=http%3A%2F%2Fimg2.3lian.com%2F2014%2Ff3%2F76%2Fd%2F115.jpg");
-  background-size: 160%;
+  background-size: 162%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -90,14 +91,7 @@
 .contentItem .circleSite .icon{
   width: 50rpx;
   height: 50rpx;
-}
-.footprintContent{
-  width: 710rpx;
-  margin-top: 20rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 888;
 }
 .recordView .text{
   margin-top: 100rpx;
@@ -107,7 +101,21 @@
   border-radius: 50rpx;
   margin-bottom: 80rpx;
 }
+/* 足迹内容层叠样式 */
+.footprintContent{
+  width: 710rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 排名内容层叠样式 */
 .rankingContentImg{
+  width: 100%;
+}
+.rankingContentImg image{
   width: 100%;
 }
 ul,li{
