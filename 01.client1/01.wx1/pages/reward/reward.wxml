@@ -1,0 +1,13 @@
+<!--pages/reward/reward.wxml-->
+<view class="reward-view">
+<!-- 头部 -->
+ <view class="reward-view-head">
+ <view class="reward-user-name"> <image src="https://clond-imgs-1300076652.cos.ap-chengdu.myqcloud.com/Camera%20RollIMG_20190506_134249.JPG "></image> </view>
+ </view>
+  <!-- 以上头部，以下打赏list -->
+  <view class="reward-list-box">
+    <view wx:for = "{{arrsyPrice}}" class="reward-list"> <view class="reward-amount">￥{{item.left}}</view> <view class="reward-amount">￥{{item.right}}</view></view>
+  </view>
+  <!-- 以上是打赏钱的金额 -->
+  <view class="customize-price">自定义金额</view>
+</view>
