@@ -51,6 +51,9 @@ Page({
     //     url: '../ranking/ranking',
     // });
     // };
+  },
+  getHeight:function(e){
+    console.log(e);
   }
 
 

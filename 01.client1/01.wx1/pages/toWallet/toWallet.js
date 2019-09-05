@@ -10,7 +10,8 @@ Page({
   onLoad: function (options) {
 
   },
-  page3() {
+  page3:function() {
+
     wx.switchTab({
       url: '../page3/page3',
     });

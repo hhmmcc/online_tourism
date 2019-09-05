@@ -43,7 +43,7 @@ Page({
 
   },
   changeLocation: function () {
-    wx.redirectTo({
+    wx.switchTab({
       url: '../declar/declar',
     })
   },

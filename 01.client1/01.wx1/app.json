@@ -1,15 +1,17 @@
 {
-  "pages": [ 
+  "pages": [
+    
      "pages/index/index",
      "pages/logs/logs",  
      "pages/page3/page3",
      "pages/record/record",
      "pages/declar/declar",
-    "pages/footprint/footprint",
-    "pages/toWallet/toWallet",
-    "pages/toPersonalCenter/toPersonalCenter",
-    "pages/reward/reward",
-    "pages/comment/comment"
+     "pages/footprint/footprint",
+     "pages/toWallet/toWallet",
+     "pages/toPersonalCenter/toPersonalCenter",
+     "pages/reward/reward",
+     "pages/chang/chang",
+     "pages/change/change"
   ],
   "tabBar": {
     "color": "#cccccc",
@@ -43,7 +45,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "遇见旅行",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

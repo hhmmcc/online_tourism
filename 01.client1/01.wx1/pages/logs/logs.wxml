@@ -2,12 +2,12 @@
 <view class="header">
   <view class="headerImg">
     <view class="iconBox">
-      <image src="../imgs/二维码.png" class="img1"></image>
-      <image src="../imgs/搜索.png" class="img2"></image>
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E4%BA%8C%E7%BB%B4%E7%A0%81.png" class="img1"></image>
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E6%90%9C%E7%B4%A2.png" class="img2"></image>
     </view>
     <view class="headerText">
       <view>
-        <image src="../imgs/旅行19.png" class="img3"></image>
+        <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E6%97%85%E8%A1%8C19.png" class="img3"></image>
       </view>
       <view class="headerContent">
         <view class="headerTitle">遇见旅行</view>
@@ -21,11 +21,11 @@
   <!-- 打卡  邀请 -->
   <view class="nav">
     <view class="navWord" bindtap="toRecordView">
-      <image src="../imgs/打卡.png" class="navImg"></image>
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E6%89%93%E5%8D%A1.png" class="navImg"></image>
       <span>打卡</span>
     </view>
     <view class="navWord" bindtap="showBounced">
-      <image src="../imgs/邀请.png" class="navImg"></image>
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E9%82%80%E8%AF%B7.png" class="navImg"></image>
       <span>邀请</span>
     </view>
   </view>
@@ -38,7 +38,7 @@
   <view class="hotTopic">
     <view class="hotIcon">热议话题</view>
     <view class="barrage">
-      <image src="../imgs/弹幕开.png"></image>
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E5%BC%B9%E5%B9%95%E5%BC%80.png"></image>
       弹幕</view>
     <view class="title">我的九月小目标</view>
   </view>
