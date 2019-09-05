@@ -1,3 +1,4 @@
+
 .head {
   height: 135rpx;
  position: fixed;
@@ -79,6 +80,8 @@ width: 45rpx;
 }
 .table {
   width: 100%;
+
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -111,6 +114,7 @@ margin-top:-20rpx;
   width: 50rpx;
   height: 50rpx;
 }
+
 .duantu {
   color: #015CC5;
 }
@@ -206,3 +210,9 @@ margin-top:-20rpx;
  width: 450rpx;
    height: 450rpx;
 }
+
+
+.usermotto {
+  margin-top: 200px;
+} 
+

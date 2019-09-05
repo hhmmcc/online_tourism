@@ -1,15 +1,39 @@
 //logs.js
-const util = require('../../utils/util.js')
+// const util = require('../../utils/util.js')
 
 Page({
   data: {
+    windowHeight:null,
+    isShow:false,
     logs: []
   },
-  onLoad: function () {
+  /**
+  * 生命周期函数--监听页面加载
+  */
+  onLoad: function (option) {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        let windowHeight = (res.windowHeight * (750 / res.windowWidth)) + 'rpx';
+        that.setData({
+          windowHeight: windowHeight
+        });
+      }
+    })
+  },
+  toRecordView:function() {
+    wx.navigateTo({
+      url: '../record/record',
+    })
+  },
+  showBounced:function(){
     this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
+      isShow: true,
+    })
+  },
+  closeView:function(){
+    this.setData({
+      isShow: false,
     })
   }
 })

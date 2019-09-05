@@ -1,0 +1,44 @@
+<view class="body1">
+  <view class="content1">
+   <image class="img1" src="../imgs/img01.png" bindtap="page3"></image>
+   <view class="item3">钱包</view>
+   <image class="img1" src="../imgs/img02.png"></image>
+  </view>
+  <view class="content2"></view>
+  <view class="content3">
+   <view class="item1">
+    <view>
+     <view class="text1">总收入</view>
+     <view class="text2">2000.00</view>
+    </view>
+    <view class="boder"></view>
+    <view>
+     <view class="text1">余额</view>
+     <view class="text2">100.00</view>
+    </view>
+   </view>
+   <view class="item2">提现</view>
+  </view>
+ </view>
+ <view class="body2"></view>
+ <view class="body3">
+  <view class="boder1"></view>
+  <view class="text3">帖子赞赏记录</view>
+  <image class="img2" src="../imgs/img03.png"></image>
+  <view class="boder2"></view>
+  <view class="text3">红包记录</view>
+  <image class="img2" src="../imgs/img03.png"></image>
+  <view class="boder2"></view>
+  <view class="text3">提现记录</view>
+  <image class="img2" src="../imgs/img03.png"></image>
+  <view class="boder2"></view>
+  <view class="text3">悬赏记录</view>
+  <image class="img2" src="../imgs/img03.png"></image>
+  <view class="boder1"></view>
+ </view>
+ <view class="body4">
+  <view class="text">关于赏金分配：</view>
+  <view class="text">内容发布者=79.4%</view>
+  <view class="text">社区运营主=20%</view>
+  <view class="text">平台服务区=0.6%</view>
+ </view>

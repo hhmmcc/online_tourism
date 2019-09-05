@@ -1,0 +1,27 @@
+<view class="body1">
+  <view class="content1">
+   <image class="img1" src="../imgs/img01.png" bindtap="page3"></image>
+   <view>个人主页</view>
+   <image class="img1" src="../imgs/img02.png"></image>
+  </view>
+  <view class="content2"></view>
+  <view class="content3">
+   <image class="img2" src="../imgs/img07.jpg"></image>
+   <view class="item1">
+    <view class="text1">deft</view>
+    <view  class="Text">
+     <view class="text2">关注</view>
+     <view class="text3">1.1万</view>
+     <view class="boder"></view>
+     <view class="text2">粉丝</view>
+     <view class="text3">1.2万</view>
+    </view>
+   </view>
+   <view class="item2">设置</view>
+  </view>
+ </view>
+<view class="body2">
+ <view class="content">暂无微帖</view>
+</view>
+ 
+

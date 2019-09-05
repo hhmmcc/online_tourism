@@ -14,7 +14,11 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.1",
+<<<<<<< HEAD
 	"appid": "wx4b8d456fd70d7ea0",
+=======
+	"appid": "wx4cbea4113aab51cd",
+>>>>>>> 9dbaefe74a2da1b4bed79d20f75904d5a67cf114
 	"projectname": "online_tourism",
 	"debugOptions": {
 		"hidedInDevtools": []
