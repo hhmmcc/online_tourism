@@ -1,0 +1,77 @@
+<view>
+  <input class="input" placeholder="内容标题（选填）"></input>
+  <input class="inputt" placeholder="说点什么..."></input>
+  <view class="weizhi">
+    <view class="box" bindtap="locationMap">
+      <image class="img" src="../../imags/map.png"></image>
+      <view class="map">开启定位</view>
+    </view>
+    <view class="change" bindtap="changeLocation">切换长图文模式></view>
+  </view>
+  <view class="bigbox">
+    <view class="smallbox">
+      <view class="ssb" bindtap="chuXianq" data-yjs="{{11}}">
+        <image class="imgh" src="../../imags/piture.png"></image>
+        <view class="tet">照片</view>
+      </view>
+      <view class="ssb" bindtap="chuXian" data-yjs="{{12}}">
+        <image class="imgh" src="../../imags/yuyin.png"></image>
+        <view class="tet">语音</view>
+      </view>
+      <view class="ssb">
+        <image class="imgh" src="../../imags/concert.png"></image>
+        <view class="tet">音乐</view>
+      </view>
+      <view class="ssb">
+        <image class="imgh" src="../../imags/video.png"></image>
+        <view class="tet">视频</view>
+      </view>
+      <view class="ssb">
+        <image class="imgh" src="../../imags/link.png"></image>
+        <view class="tet" bindtap="locationScan">链接</view>
+      </view>
+    </view>
+    <view class="ssb">
+      <image class="imgh" src="../../imags/smail.png"></image>
+      <view class="tet">表情</view>
+    </view>
+
+  </view>
+
+  <view class="secondbox">
+    <view class="text">选择话题</view>
+    <view class="right">
+      <view class="t">全部</view>
+      <image class="imghh" src="../../imags/you.png"></image>
+    </view>
+  </view>
+  <button class="last" bindtap="tiaozhuan">发布</button>
+
+   <view style='{{aop==12?" display: block;":"display: none;"}}' class="yincang">
+    <view class="poi">
+    <view class="pp">
+    <view class="shijian">0:00</view>
+    <view class="onclic">点击录音</view>
+    </view>
+      <view class="imgbox"><image class="imgu" src="../../imags/yuyinq.png"></image></view>
+    
+    </view>
+    <image class="huidiao" src="../../imags/close.png" bindtap="closeLocation"></image>
+  </view>
+
+
+    <view style='{{aop==11?" display: block;":"display: none;"}}' class="yincang">
+   <swiper class="tupian" indicator-dots='true' autoplay='true' duration='{{500}}' interval='{{2000}}'>
+
+<view wx:for='{{imgUrls}}'>
+
+  <swiper-item>
+     <image class="sco" onclic= src='{{item}}'></image>
+  </swiper-item>
+</view>
+
+</swiper>
+    <image class="huidiao" src="../../imags/close.png" bindtap="closeLocation"></image>
+  </view>
+
+</view>

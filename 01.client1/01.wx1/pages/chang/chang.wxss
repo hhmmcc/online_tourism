@@ -1,0 +1,21 @@
+.ar{
+  height: 400rpx;
+  width: 400rpx;
+  margin: 50% auto;
+
+  text-align: center;
+  line-height: 100rpx;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ align-items: center
+}
+.img{
+  height: 200rpx;
+  width: 200rpx;
+}
+.tet{
+  font-size: 60rpx;
+  word-spacing: 10rpx;
+  color: greenyellow
+}

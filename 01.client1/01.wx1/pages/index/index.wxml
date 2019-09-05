@@ -1,13 +1,103 @@
-<!--index.wxml-->
-<view class="container">
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
+
+<view class="head">
+<view class="buleLine0"></view>
+<view class="buleLine"></view>
+<view class="buleLine"></view>
+<view class="buleLine"></view>
+<view class="buleLine2"></view>
+<view class="buleLine2"></view>
+<view class="buleLine2"></view>
+<view class="buleLine2"></view>
+<view class="buleLine"></view>
+<view class="buleLine"></view>
+<view class="buleLine"></view>
+<view class="buleLine1"></view>
+<view class="l-head">
+<image  class="head-img"  src="../imgs/cd.png"></image>
+<image class="title"  src="../imgs/viva.png"></image>
+<view class="person">
+<image  class="head-img"  src="../imgs/guanli.png"></image>
+<view class="person-f">个人中心</view>
 </view>
+</view>
+</view>
+<view class="phone"><image src="../imgs/phone.png" ></image></view>
+<view class="phone1"><image src="../imgs/kefu.png" ></image></view>
+<view class="phone2" wx:if="{{index==1}}" bindtap="onHide"><image src="../imgs/ma.png" ></image></view>
+<view class="moroco">
+<image src="http://7xnj7x.com2.z0.glb.qiniucdn.com/20190306102331"></image>
+</view>
+<view class="table">
+<view class="gy">
+<image src="../imgs/all2.png"></image>
+<view class="fnt">关于</view>
+</view>
+<view class="gy">
+<image src="../imgs/liuyan.png"></image>
+<view class="fnt">留言</view>
+</view>
+<view class="gy">
+<image src="../imgs/dz.png"></image>
+<view class="fnt">口碑</view>
+</view>
+<view class="gy" bindtap="onClick">
+<image src="../imgs/ewma.png" ></image>
+<view class="fnt">关注我们</view>
+</view>
+</view>
+<view class="content">
+<view class="any">
+<view class="duantu">短途旅行 
+<image src="../imgs/jt.png"></image>
+</view>
+<view class="jl">江南秘境</view>
+<view class="jl">寻找上海周边小众旅游目的地</view>
+<image src="../imgs/bus.png" class="bus"></image>
+</view>
+<view class="any">
+<view class="duantu">长途旅行 
+<image src="../imgs/jt.png"></image>
+</view>
+<view class="jl">始终坚持小团队</view>
+<view class="jl">专注体验  深入当地人</view>
+<image src="../imgs/plane.jpg" class="bus"></image>
+</view>
+<view class='remen'>------------------ 热门旅行推荐 ------------------</view>
+<view class="tuijian">
+<image src="http://7xnj7x.com2.z0.glb.qiniucdn.com/20190801174952"></image>
+<view class="l-tiltle">国际路线【欧洲东境】</view>
+<view class="p">欧洲东南部，一个有着纷杂过往与神奇魅力的迷人之地，因为它太难以定义，它的独特性与复杂性或许是世界唯一的，这里是一个承载着多元文明、充满着多民族风情的奇妙半岛。</view>
+<view class="money"><view class="day">9DAYS</view><view class="nine">￥9998</view></view>
+</view>
+<view class="tuijian">
+<image src="http://7xnj7x.com2.z0.glb.qiniucdn.com/20190301113637"></image>
+<view class="l-tiltle">国际路线【千年摩洛哥】</view>
+<view class="p">这次摩洛哥我们用城市、沙漠、峡谷、海岸这些最能代表摩洛哥特色和国家景观性格的元素来带你了解这所国家，从四大皇城到撒哈拉沙漠带你走进摩洛哥的深处，一起寻觅这个国家迷人的过往。</view>
+<view class="money"><view class="day">11DAYS</view><view class="nine">￥14888</view></view>
+</view>
+<view class="tuijian">
+<image src="http://7xnj7x.com2.z0.glb.qiniucdn.com/20181016145817"></image>
+<view class="l-tiltle">国际路线【缅甸时光】</view>
+<view class="p">带你走进老旧的缅甸故事里，感受时光的倒流，感受重返东南亚1980年代的岁月静好。</view>
+<view class="money"><view class="day">9DAYS</view><view class="nine">￥7988</view></view>
+</view>
+<view class="tuijian">
+<image src="http://7xnj7x.com2.z0.glb.qiniucdn.com/20170906154837"></image>
+<view class="l-tiltle">【金色塔里木】（越野进化版）</view>
+<view class="p">“这是一次极致的越野之旅，一次惊艳的秋色之旅。从浩瀚的库木塔格沙漠，再到金黄的塔里木河畔，穿梭于千年胡杨间，奔赴色彩的巅峰……”</view>
+<view class="money"><view class="day">8DAYS</view><view class="nine">￥6988</view></view>
+</view>
+<view class="tuijian">
+<image src="http://7xnj7x.com2.z0.glb.qiniucdn.com/20190802131002"></image>
+<view class="l-tiltle">【秋满长白】</view>
+<view class="p">长白山林区，被评为中国最美的森林之一，秋天，将迎来它最美的时候，几场秋雨过后，高大的红松和各种落叶乔木杂糅相间的原始森林便会挂上五彩斑斓的颜色，此时，无论朝那个角度取景，都堪比一幅精美的油画。</view>
+<view class="money"><view class="day">6DAYS</view><view class="nine">￥2788</view></view>
+</view>
+<view class="tuijian">
+<image src="http://7xnj7x.com2.z0.glb.qiniucdn.com/20180426095303"></image>
+<view class="l-tiltle">【香格里拉】（秋季徒步版）</view>
+<view class="p">从丽江出发，沿金沙江一路向北，穿过繁花遍野的小中甸牧场，在普达措公园漫步古老的高原湖泊和牧场，从白马雪山一路向着梅里朝圣……逐渐揭开香格里拉的神秘面纱，在这个“最接近天堂的地方”感受自然和信仰的力量。</view>
+<view class="money"><view class="day">6DAYS</view><view class="nine">￥3288</view></view>
+</view>
+</view>
+

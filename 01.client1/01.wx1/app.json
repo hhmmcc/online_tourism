@@ -1,18 +1,50 @@
 {
-  "pages": [ 
-    "pages/logs/logs",
-    "pages/toPersonalCenter/toPersonalCenter",
-    "pages/index/index",  
-    "pages/page3/page3",
-    "pages/record/record",
-    "pages/footprint/footprint",
-    "pages/toWallet/toWallet"
+  "pages": [
     
+     "pages/index/index",
+     "pages/logs/logs",  
+     "pages/page3/page3",
+     "pages/record/record",
+     "pages/declar/declar",
+   "pages/footprint/footprint",
+    "pages/toWallet/toWallet",
+    "pages/toPersonalCenter/toPersonalCenter",
+    "pages/reward/reward",
+    "pages/comment/comment"
   ],
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#EDDF2E",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "旅行",
+      "iconPath": "./imgs/lvxing.png",
+      "selectedIconPath": "./imgs/lvxing (1).png"
+    },
+    {
+      "pagePath": "pages/logs/logs",
+      "text": "社区",
+      "iconPath": "./imgs/shequ.png",
+      "selectedIconPath": "./imgs/shequ (1).png"
+    },
+    {
+      "pagePath": "pages/declar/declar",
+      "text": "发布",
+      "iconPath": "./imgs/post.png",
+      "selectedIconPath": "./imgs/post (1).png"
+    },
+    {
+      "pagePath": "pages/page3/page3",
+      "text": "个人中心",
+      "iconPath": "./imgs/my.png",
+      "selectedIconPath": "./imgs/my (1).png"
+    }]
+    
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "遇见旅行",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

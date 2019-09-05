@@ -13,9 +13,9 @@
 		"coverView": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.1",
-	"appid": "wx4cbea4113aab51cd",
-	"projectname": "online_tourism",
+	"libVersion": "2.8.2",
+	"appid": "wx2acc179ea0f7bcd4",
+	"projectname": "tourism",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

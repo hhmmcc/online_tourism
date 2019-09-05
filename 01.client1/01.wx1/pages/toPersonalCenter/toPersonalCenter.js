@@ -8,7 +8,7 @@ Page({
   },
 
   page3(){
-    wx.redirectTo({
+    wx.switchTab({
       url: '../page3/page3',
     })
   }

@@ -1,10 +1,10 @@
 {
-  "pages": [   
+  "pages": [  
+    "pages/logs/logs", 
     "pages/page3/page3",
     "pages/toWallet/toWallet",
     "pages/toPersonalCenter/toPersonalCenter",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/index/index"
    
   ],
   "window": {
