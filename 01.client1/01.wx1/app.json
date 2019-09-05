@@ -1,6 +1,5 @@
 {
   "pages": [
-    
      "pages/index/index",
      "pages/logs/logs",  
      "pages/page3/page3",
@@ -40,13 +39,18 @@
       "iconPath": "./imgs/my.png",
       "selectedIconPath": "./imgs/my (1).png"
     }]
-    
   },
+
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "遇见旅行",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "permission": {
+      "scope.userLocation": {
+        "desc": "./sitemap.json"
+      }
+    }
 }

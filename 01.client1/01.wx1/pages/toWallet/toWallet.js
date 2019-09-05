@@ -11,8 +11,9 @@ Page({
 
   },
   page3:function() {
+
     wx.switchTab({
       url: '../page3/page3',
-    })
+    });
   }
 })
