@@ -1,21 +1,208 @@
-/**index.wxss**/
-.userinfo {
+.head {
+  height: 135rpx;
+ position: fixed;
+ background-color: white;
+ z-index: 9999；
+}
+.buleLine {
+  width: 57rpx;
+  height: 10rpx;
+  background: #2D68DE;
+   display: inline-block;
+   margin-right: 5rpx
+}
+.buleLine1 {
+  width: 70rpx;
+  height: 10rpx;
+  background: #2C56A9;
+   display: inline-block;
+}
+.buleLine0 {
+  width: 70rpx;
+  height: 10rpx;
+  background: #2C56A9;
+   display: inline-block;
+   margin-right: 5rpx
+}
+.buleLine2 {
+  width: 57rpx;
+  height: 10rpx;
+  background: #2D68DE;
+   display: inline-block;
+   margin-right: 5rpx
+}
+.head-img {
+height: 60rpx;
+width: 60rpx;
+padding: 0 20rpx;
+}
+.title {
+  width: 300rpx;
+  height: 80rpx;
+}
+.l-head {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+}
+.person {
+  height: 80rpx;
+width: 85rpx;
+margin-right: 20rpx;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+}
+.person-f {
+  font-size: 22rpx;
+  color: #8F8B8B;
+}
+.moroco image{
+  margin-top: 140rpx;
+width: 100%;
+height: 400rpx;
+}
+.gy {
+  height: 100rpx;
+  width: 100rpx;
+  border: 1px solid black;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 110rpx;
+  margin-top: 20rpx;
+}
+.gy image {
+   height: 45rpx;
+width: 45rpx;
+}
+.table {
+  width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.fnt {
+  font-size: 30rpx;
+  width: 120rpx;
+margin-left:-10rpx;
+margin-top:-20rpx;
+}
+.content {
+  width: 100%;
+  background-color: #FBFBFB;
+  margin-top: 90rpx;
+  border-top: 2px solid #F4F4F4;
+   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.any {
+  width: 85%;
+  height: 200rpx;
+  border: 1px solid #E4E4E4;
+  margin: 25rpx 0  30rpx 0;
+  padding: 30rpx;
+  background-color: white;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.duantu image {
+  width: 50rpx;
+  height: 50rpx;
 }
-
-.usermotto {
-  margin-top: 200px;
+.duantu {
+  color: #015CC5;
+}
+.jl {
+  font-size: 30rpx;
+  margin: 15rpx 0;
+  color: #666666;
+}
+.bus {
+   width: 290rpx;
+  height: 180rpx;
+  margin-left: 370rpx;
+ margin-top: -1000rpx;
+ padding-bottom: 20rpx;
+}
+.remen {
+  color: #666666;
+  font-size: 32rpx;
+}
+.tuijian {
+  width: 85%;
+  height: 650rpx;
+  border: 1px solid #E4E4E4;
+  margin: 25rpx 0  30rpx 0;
+  padding: 20rpx 15rpx 70rpx;
+  background-color: white;
+}
+.tuijian image {
+    width: 100%;
+  height: 329rpx;
+}
+.l-tiltle {
+ font-size: 37rpx;
+}
+.p{
+  line-height: 40rpx;
+    font-size: 30rpx;
+    color: #666666;
+    font-weight: lighter;
+    margin-top: 15rpx;
+}
+.money {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 60rpx;
+}
+.day {
+  text-decoration: underline;
+}
+.nine {
+  color: #015CC5
+}
+.phone {
+     position: fixed;
+     width: 60rpx;
+   height: 60rpx;
+   background-color: rgba(86,118,222, 0.8);
+   border: 5rpx solid rgba(250,251,253, 0.8);
+   border-radius: 50%;
+   margin-left:620rpx;
+   margin-top: 700rpx;
+}
+.phone image {
+ width: 60rpx;
+   height: 60rpx;
+}
+.phone1 {
+     position: fixed;
+     width: 60rpx;
+   height: 60rpx;
+   background-color: rgba(86,118,222, 0.8);
+   border: 5rpx solid rgba(250,251,253, 0.8);
+   border-radius: 50%;
+   margin-left:620rpx;
+   margin-top: 790rpx;
+   text-align: center;
+   line-height: 75rpx;
+}
+.phone1 image {
+ width: 45rpx;
+   height: 45rpx;
+}
+.phone2 {
+     position: fixed;
+     width: 100%;
+   height: 100%;
+   background-color: rgba(98,98,98, 0.7);
+   text-align: center;
+   line-height: 1500rpx;
+}
+.phone2 image {
+ width: 450rpx;
+   height: 450rpx;
 }
