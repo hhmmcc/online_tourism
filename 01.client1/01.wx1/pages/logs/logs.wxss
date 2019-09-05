@@ -1,8 +1,148 @@
-.log-list {
+@import "../../iconfont.wxss";
+.header {
+  width: 750rpx;
   display: flex;
   flex-direction: column;
-  padding: 40rpx;
+  align-items: center;
+  background: #F7F7F7;
+  position: fixed;
 }
-.log-item {
-  margin: 10rpx;
+.headerImg{
+  width: 750rpx;
+  height: 200rpx;
+  background-image:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567592916616&di=756e2c99b8cac5ba18f95f510387987b&imgtype=0&src=http%3A%2F%2Fwww.79n.cn%2Fuploads%2Fallimg%2F130726%2F1-130H6212208.jpg");
+  background-size: 100%;
+  border-radius: 8rpx;
+  color: white;
 }
+.iconBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx;
+}
+.iconBox .img1{
+  width: 50rpx;
+  height: 50rpx;
+}
+.iconBox .img2{
+  width: 40rpx;
+  height: 40rpx;
+}
+.img3{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border: 5rpx solid white;
+}
+.headerText{
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  margin: 20rpx;
+}
+.headerContent{
+  display: flex;
+  flex-direction: column;
+  padding-bottom:20rpx; 
+  justify-content: space-between;
+  align-items: flex-start;
+  /* color: white; */
+}
+.headerTitle{
+  font-size: 36rpx;
+}
+.headerWord{
+  width: 380rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30rpx; 
+}
+.header .nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav .navWord{
+  width: 49%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #717171;
+  background: white;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx; 
+
+}
+.navWord .navImg{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+.hotTopic{
+  width: 98%;
+  height: 200rpx;
+  margin: 20rpx;
+  display: flex;
+  background-image: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1900356323,3585811647&fm=26&gp=0.jpg");
+  background-size: 100%;
+  border-radius: 8rpx;
+  color: white;
+  position: relative;
+}
+.hotTopic .hotIcon{
+  height:20%;
+  font-size: 30rpx;
+  background: #F04042;
+  padding: 10rpx;
+  text-align: center;
+  position: absolute;
+  top: -5rpx;
+  left: 10rpx;
+}
+.hotTopic .barrage{
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  border: 1rpx solid white;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 50rpx;
+  top: 20rpx;
+}
+.barrage image{
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 5rpx;
+}
+.hotTopic .title{
+  margin: auto;
+  font-size: 38rpx;
+}
+.bounced{
+  width: 600rpx;
+  height: 650rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 80rpx;
+  top: 180rpx;
+  /* background: red; */
+  z-index: 999;
+}
+.bounced image{
+  width: 580rpx;
+  margin-top: 0;
+}
+

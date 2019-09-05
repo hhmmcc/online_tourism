@@ -1,0 +1,44 @@
+/* pages/footprint/footprint.wxss */
+.operate{
+width:100%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+font-size: 32rpx;
+color:#000;
+padding-bottom: 40rpx;
+}
+.year{
+padding:0 30%;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+font-size:32rpx;
+color:#404040;
+margin-bottom: 40rpx;
+}
+.calender{
+display: flex;
+flex-direction: column;
+padding:0 4.5%;
+width:91%;
+border-top:1rpx solid #eaeaea;
+padding-top:30rpx;
+color:#404040;
+}
+.calender .week{
+display: flex;
+flex-direction: row;
+}
+.calender .week text{
+width:14%;
+text-align: center;
+font-size:26rpx;
+}
+.calender .date text{
+width:14%;
+display: inline-block;
+text-align: center;
+font-size:26rpx;
+color:#000;
+}
