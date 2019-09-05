@@ -1,0 +1,44 @@
+<view>
+  <input class="input" placeholder="请输入标题"></input>
+  <input class="inputt" ></input>
+  <view class="weizhi">
+    <view class="box" bindtap="locationMap">
+      <image class="img" src="../../imags/map.png"></image>
+      <view class="map">开启定位</view>
+    </view>
+    <view class="change" bindtap="changeLocation">切换微贴模式></view>
+  </view>
+  <view class="bigbox">
+    <view class="smallbox">
+      <view class="ssb">
+        <image class="imgh" src="../../imags/piture.png"></image>
+        <view class="tet">照片</view>
+      </view>
+      <view class="ssb">
+        <image class="imgh" src="../../imags/yuyin.png"></image>
+        <view class="tet">语音</view>
+      </view>
+      <view class="ssb">
+        <image class="imgh" src="../../imags/concert.png"></image>
+        <view class="tet">音乐</view>
+      </view>
+      <view class="ssb">
+      <image class="imgh" src="../../imags/smail.png"></image>
+      <view class="tet">表情</view>
+    </view>
+      
+    </view>
+  
+
+  </view>
+
+  <view class="secondbox">
+    <view class="text">选择话题</view>
+    <view class="right">
+      <view class="t">全部</view>
+      <image class="imghh" src="../../imags/you.png"></image>
+    </view>
+  </view>
+  <button class="last">发布</button>
+
+</view>

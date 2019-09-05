@@ -1,9 +1,9 @@
 
 <view class="head">
-<view class="buleLine0">1</view>
-<view class="buleLine">2</view>
-<view class="buleLine">55</view>
-<view class="buleLine">3</view>
+<view class="buleLine0"></view>
+<view class="buleLine"></view>
+<view class="buleLine"></view>
+<view class="buleLine"></view>
 <view class="buleLine2"></view>
 <view class="buleLine2"></view>
 <view class="buleLine2"></view>
