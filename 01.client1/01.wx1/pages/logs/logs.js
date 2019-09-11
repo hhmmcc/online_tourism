@@ -7,6 +7,7 @@ Page({
     listIdex: 0,
     arrayRank:[],
     topcisContent:[],
+    likeCount:9,
   },
   /**
   * 生命周期函数--监听页面加载
@@ -66,6 +67,11 @@ Page({
     wx.navigateTo({
       url: '../comment/comment?userid=' + userid + '&&userIndex=' + userIndex,
     })
+  },
+  toContenLike:function(count){
+    let userindex = count.currentTarget.dataset.userindex;
+    let user = count.currentTarget.dataset.user;
+    console.log(app.globalData.topcisContent[user].topicContent[userindex].likeCount++);
   },
   toRecordView: function () {
     wx.navigateTo({

@@ -113,7 +113,7 @@
         </view>
         <view class="comment-box-icon">
         <image class="comment-box-image" src = "../../imgs/awesome.png"></image>
-        <text>9</text>
+        <text>{{item.likeCount}}</text>
         </view>
         </view>
         <!-- 评论内容 -->
@@ -155,9 +155,9 @@
         <image class="comment-box-image" src = "../../imgs/comment.png"></image>
         <text>4</text>
         </view>
-        <view class="comment-box-icon">
+        <view class="comment-box-icon" bindtap="toContenLike" data-user='{{listIdex}}'  data-userindex="{{index}}">
         <image class="comment-box-image" src = "../../imgs/awesome.png"></image>
-        <text>9</text>
+        <text>{{item.likeCount}}</text>
         </view>
         </view>
         <!-- 评论内容 -->
