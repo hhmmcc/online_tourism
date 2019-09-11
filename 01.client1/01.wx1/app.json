@@ -5,12 +5,12 @@
      "pages/page3/page3",
      "pages/record/record",
      "pages/declar/declar",
-     "pages/footprint/footprint",
-     "pages/toWallet/toWallet",
-     "pages/toPersonalCenter/toPersonalCenter",
-     "pages/reward/reward",
      "pages/chang/chang",
-     "pages/change/change"
+   "pages/footprint/footprint",
+    "pages/toWallet/toWallet",
+    "pages/toPersonalCenter/toPersonalCenter",
+    "pages/reward/reward",
+    "pages/comment/comment"
   ],
   "tabBar": {
     "color": "#cccccc",
@@ -39,13 +39,18 @@
       "iconPath": "./imgs/my.png",
       "selectedIconPath": "./imgs/my (1).png"
     }]
-    
   },
+
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "遇见旅行",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+    "sitemapLocation": "sitemap.json",
+    "permission": {
+      "scope.userLocation": {
+        "desc": "./sitemap.json"
+      }
+    }
 }
