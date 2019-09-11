@@ -1,6 +1,5 @@
-// pages/reward/reward.js
+const app = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -19,13 +18,18 @@ Page({
         right: 100
       }
     ],
+    userid:null,
+    userImg:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let url = app.globalData.topcisContent[options.userid].topicContent[options.userIndex].head_img;
+      this.setData({
+        userImg: url,
+      });
   },
 
   /**

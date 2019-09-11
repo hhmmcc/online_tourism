@@ -34,6 +34,11 @@ height: 100%;
   box-sizing: border-box;
   padding: 10rpx 20rpx;
 }
+.connectUserContent{
+  width: 80%;
+  height: 60%;
+  overflow: hidden;
+}
 .connectUser{
   color: black;
 }

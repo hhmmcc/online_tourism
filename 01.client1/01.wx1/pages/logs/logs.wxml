@@ -58,27 +58,80 @@
        </view>
     </view>
       <!-- 旅行发布的列表和内容 -->
+
       <view wx:if = '{{line==0}}'>
       <!-- content-menu-list-->
       <view class="content-menu">
-       <view wx:for ="{{arrayList}}"  
-       class='{{listIdex==index?"content-menu-list-color":"content-menu-list"}}  {{index==1?".content-menu-list-color2":"content-menu-list"}}'                
+       <view wx:for ="{{topcisContent}}"  
+       class='{{listIdex==index?"content-menu-list-color":"content-menu-list"}}  {{index==1?"content-menu-list-color2":"content-menu-list"}}'                
         bindtap="onChangeList" 
         data-index='{{index}}' 
         style="color:{{color}}">
-       {{item.title}}
+       {{item.topic_title}}
        </view>
        </view>
-       <!-- 旅行发布的内容 全部内容-->
-      <view wx:if='{{listIdex==0}}'   class="all-content">
-        <view wx:for='{{arrayContentItem}}' class="post-content-box">
+
+      <!-- 旅行发布的内容 全部内容class="all-content"-->
+      <view  
+      wx:if = "{{listIdex==0}}" 
+      wx:for = "{{topcisContent}}" 
+      wx:for-index = "index2"
+      wx:for-item="item1" 
+      wx:key = "{{index2}}">
+      <view wx:for='{{topcisContent[index2].topicContent}}'
+        class="post-content-box">
        <view class="post-content-head">
        <!-- left -->
        <view class="postContentHeadLeft">
-       <image class="avatar" src = "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1514914547,1946439828&fm=26&gp=0.jpg"></image>
+       <image class="avatar" src = "{{item.head_img}}"></image>
        <view class="user-name"> 
        <view class="user-name-top">
-       <text style="color:#4D587B">{{item.name}}</text>  <view class="user-grade">1v1</view>
+       <text style="color:#4D587B">{{item.user_name}}</text>  <view class="user-grade">1v1</view>
+       </view>
+       <view class="user-name-bottom">07/31  19:03</view>
+        </view>
+       </view>
+       <!-- right -->
+      <image class="selectImg" src = "../../imgs/sangedain.png"></image>
+       </view>
+        <view class="postContent"> 
+        <text wx:if="{{item1.topic_title=='全部内容'}}" class="contentTitle"></text>   
+        <text wx:else class="contentTitle">#{{item1.topic_title}}#</text>
+        <view class="shareContent">{{item.content}}</view>
+        <view class="shareImageBox">
+        <image class="shareImage" src = "{{item.imgs}}"></image>
+        </view>
+        <view class="comment-box">
+        <view class="comment-box-icon" bindtap="toNavigateRewardPrice" data-user='{{index2}}' data-userindex="{{index}}">
+        <image class="comment-box-image" src = "../../imgs/reward.png"></image>
+        <text>打赏</text>
+        </view>
+        <!-- 评论 -->
+        <view class="comment-box-icon" bindtap="toNavigateCommentView"  data-user='{{index2}}' data-userindex="{{index}}">
+        <image class="comment-box-image" src = "../../imgs/comment.png"></image>
+        <text>4</text>
+        </view>
+        <view class="comment-box-icon">
+        <image class="comment-box-image" src = "../../imgs/awesome.png"></image>
+        <text>9</text>
+        </view>
+        </view>
+        <!-- 评论内容 -->
+        <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮。</view>           
+        </view>
+        
+       </view>
+      </view>
+
+       <!-- 旅行发布的内容 各个模块内容class="all-content"-->
+        <view wx:if = "{{listIdex>0}}" wx:for='{{topcisContent[listIdex].topicContent}}' class="post-content-box">
+       <view class="post-content-head">
+       <!-- left -->
+       <view class="postContentHeadLeft">
+       <image class="avatar" src = "{{item.head_img}}"></image>
+       <view class="user-name"> 
+       <view class="user-name-top">
+       <text style="color:#4D587B">{{item.user_name}}</text>  <view class="user-grade">1v1</view>
        </view>
        <view class="user-name-bottom">07/31  19:03</view>
         </view>
@@ -87,18 +140,18 @@
       <image class="selectImg" src = "../../imgs/sangedain.png"></image>
        </view>
         <view class="postContent">
-        <text class="contentTitle">{{item.title}}</text>
+        <text class="contentTitle">#{{topcisContent[listIdex].topic_title}}#</text>
         <view class="shareContent">{{item.content}}</view>
         <view class="shareImageBox">
-        <image wx:for = '{{item.imgs}}' class="shareImage" src = "{{item.src}}"></image>
+        <image class="shareImage" src = "{{item.imgs}}"></image>
         </view>
         <view class="comment-box">
-        <view class="comment-box-icon" bindtap="toNavigateRewardPrice">
+        <view class="comment-box-icon" bindtap="toNavigateRewardPrice" data-user='{{listIdex}}' data-userindex="{{index}}">
         <image class="comment-box-image" src = "../../imgs/reward.png"></image>
         <text>打赏</text>
         </view>
         <!-- 评论 -->
-        <view class="comment-box-icon" bindtap="toNavigateCommentView">
+        <view class="comment-box-icon" bindtap="toNavigateCommentView" data-user='{{listIdex}}' data-userindex="{{index}}">
         <image class="comment-box-image" src = "../../imgs/comment.png"></image>
         <text>4</text>
         </view>
@@ -111,97 +164,9 @@
         <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮。</view>           
         </view>
        </view>
-      </view>
 
-      <!-- 精华内容 -------------------------->
-      <view wx:if='{{listIdex==1}}'   class="essence-content">
-        <view class="post-content-box">
-       <view class="post-content-head">
-       <!-- left -->
-       <view class="postContentHeadLeft">
-       <image class="avatar" src = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3526260461,896251409&fm=26&gp=0.jpg"></image>
-       <view class="user-name"> 
-       <view class="user-name-top">
-       <text style="color:#4D587B">旅行菌</text>  <view class="user-grade">1v1</view>
-       </view>
-       <view class="user-name-bottom">07/31  19:03</view>
-        </view>
-       </view>
-       <!-- right -->
-      <image class="selectImg" src = "../../imgs/sangedain.png"></image>
-       </view>
-        <view class="postContent">
-        <text class="contentTitle">#旅行女子图鉴#</text>
-        <view class="shareContent">你好，世界！</view>
-        <view class="shareImageBox">
-        <image class="shareImage" src = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1024757237,230878305&fm=26&gp=0.jpg"></image>
-        </view>
-        <view class="comment-box">
-        <view class="comment-box-icon" bindtap="toNavigateRewardPrice">
-        <image class="comment-box-image" src = "../../imgs/reward.png"></image>
-        <text>打赏</text>
-        </view>
-        <view class="comment-box-icon" bindtap="toNavigateCommentView">
-        <image class="comment-box-image" src = "../../imgs/comment.png"></image>
-        <text>4</text>
-        </view>
-        <view class="comment-box-icon">
-        <image class="comment-box-image" src = "../../imgs/awesome.png"></image>
-        <text>9</text>
-        </view>
-        </view>
-        <!-- 评论内容 -->
-        <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮，是精华。</view>           
-        </view>
-       </view>
-      </view>
-       
-       <!-- 旅行攻略部分 --------------------------------->
-      <view wx:if='{{listIdex==2}}'>
-        <view class="post-content-box">
-       <view class="post-content-head">
-       <!-- left -->
-       <view class="postContentHeadLeft">
-       <image class="avatar" src = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3526260461,896251409&fm=26&gp=0.jpg"></image>
-       <view class="user-name"> 
-       <view class="user-name-top">
-       <text style="color:#4D587B">你好，世界</text>  <view class="user-grade">1v1</view>
-       </view>
-       <view class="user-name-bottom">07/31  19:03</view>
-        </view>
-       </view>
-       <!-- right -->
-      <image class="selectImg" src = "../../imgs/sangedain.png"></image>
-       </view>
-        <view class="postContent">
-        <text class="contentTitle">#旅行攻略#</text>
-        <view class="shareContent">你好，世界！</view>
-        <view class="shareImageBox">
-        <image class="shareImage" src = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1024757237,230878305&fm=26&gp=0.jpg"></image>
-        </view>
-        <view class="comment-box">
-        <view class="comment-box-icon" bindtap="toNavigateRewardPrice">
-        <image class="comment-box-image" src = "../../imgs/reward.png"></image>
-        <text>打赏</text>
-        </view>
-        <view class="comment-box-icon" bindtap="toNavigateCommentView">
-        <image class="comment-box-image" src = "../../imgs/comment.png"></image>
-        <text>4</text>
-        </view>
-        <view class="comment-box-icon">
-        <image class="comment-box-image" src = "../../imgs/awesome.png"></image>
-        <text>9</text>
-        </view>
-        </view>
-        <!-- 评论内容 -->
-        <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮，是精华。</view>           
-        </view>
-       </view>
-
-      </view>
-
-         
     </view>
+
   <!-- 分隔线旅行 以下是活跃页面部分----->
   <!-- 第一名 -->
   <view wx:if = '{{line==1}}' class="active-box">
@@ -235,16 +200,16 @@
   <view wx:for = '{{arrayRank}}' class="leaderboard-box">
   <view class="leaderboard-box-left">
   <text class="Rank-text">{{4+index}}</text>
-  <image class="leaderboardImage02" src='{{item.src}}'></image>
-  <view style="color:#4D587B">{{item.name}}</view> <view class="user-grade">1v1</view>
+  <image class="leaderboardImage02" src='{{item.topicContent[0].head_img}}'></image>
+  <view style="color:#4D587B">{{item.topicContent[0].user_name}}</view> <view class="user-grade">1v1</view>
   </view>
-  <view class="leaderboard-box-right"> <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image> </view>
+  <view class="leaderboard-box-right"> <image class="leaderboardImage02"      src="../../imgs/rightarrow.png"></image> </view>
   </view>
 
   </view>
 <!-- 分割线 -->
 </view>
- 
+
 </view>
 
  

@@ -2,7 +2,7 @@
 <view class="reward-view">
 <!-- 头部 -->
  <view class="reward-view-head">
- <view class="reward-user-name"> <image src="https://clond-imgs-1300076652.cos.ap-chengdu.myqcloud.com/Camera%20RollIMG_20190506_134249.JPG "></image> </view>
+ <view class="reward-user-name"> <image src="{{userImg}}"></image> </view>
  </view>
   <!-- 以上头部，以下打赏list -->
   <view class="reward-list-box">
