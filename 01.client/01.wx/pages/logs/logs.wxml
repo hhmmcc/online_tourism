@@ -1,0 +1,250 @@
+<!--logs.wxml-->
+<view class="header">
+  <view class="headerImg">
+    <view class="iconBox">
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E4%BA%8C%E7%BB%B4%E7%A0%81.png" class="img1"></image>
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E6%90%9C%E7%B4%A2.png" class="img2"></image>
+    </view>
+    <view class="headerText">
+      <view>
+        <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E6%97%85%E8%A1%8C19.png" class="img3"></image>
+      </view>
+      <view class="headerContent">
+        <view class="headerTitle">遇见旅行</view>
+        <view class="headerWord">
+          <span>总浏览 142.1万</span>
+          <span>用户数 4.3万</span>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 打卡  邀请 -->
+  <view class="nav">
+    <view class="navWord" bindtap="toRecordView">
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E6%89%93%E5%8D%A1.png" class="navImg"></image>
+      <span>打卡</span>
+    </view>
+    <view class="navWord" bindtap="showBounced">
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E9%82%80%E8%AF%B7.png" class="navImg"></image>
+      <span>邀请</span>
+    </view>
+  </view>
+  <!-- 弹框内容 -->
+  <view class="bounced" wx:if="{{isShow}}" bindtap="closeView">
+    <image src="../imgs/bounced1.jpg"></image>
+  </view>
+
+  <!-- 热议话题 -->
+  <view class="hotTopic">
+    <view class="hotIcon">热议话题</view>
+    <view class="barrage">
+      <image src="https://imgs-1300073211.cos.ap-chengdu.myqcloud.com/%E5%BC%B9%E5%B9%95%E5%BC%80.png"></image>
+      弹幕</view>
+    <view class="title">我的九月小目标</view>
+  </view>
+
+  <!-- 下方导航栏 -->
+
+<!--logs.wxml-content-->
+<view class="content-box">
+<!-- content-tab -->
+    <view class="content-tab">
+       <view class='{{line==0?"selectColor":"content-tab-line"}}' bindtap='tabChange' data-line="0">全部
+        <view wx:if="{{line==0}}" class="line" ></view>
+        </view>
+       <view class='{{line==1?"selectColor":"content-tab-line"}}'  bindtap='tabChange' data-line="1">活跃
+       <view wx:if="{{line==1}}" class="line">
+       </view>
+       </view>
+    </view>
+      <!-- 旅行发布的列表和内容 -->
+      <view wx:if = '{{line==0}}'>
+      <!-- content-menu-list-->
+      <view class="content-menu">
+       <view wx:for ="{{arrayList}}"  
+       class='{{listIdex==index?"content-menu-list-color":"content-menu-list"}}  {{index==1?".content-menu-list-color2":"content-menu-list"}}'                
+        bindtap="onChangeList" 
+        data-index='{{index}}' 
+        style="color:{{color}}">
+       {{item.title}}
+       </view>
+       </view>
+       <!-- 旅行发布的内容 全部内容-->
+      <view wx:if='{{listIdex==0}}'   class="all-content">
+        <view wx:for='{{arrayContentItem}}' class="post-content-box">
+       <view class="post-content-head">
+       <!-- left -->
+       <view class="postContentHeadLeft">
+       <image class="avatar" src = "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1514914547,1946439828&fm=26&gp=0.jpg"></image>
+       <view class="user-name"> 
+       <view class="user-name-top">
+       <text style="color:#4D587B">{{item.name}}</text>  <view class="user-grade">1v1</view>
+       </view>
+       <view class="user-name-bottom">07/31  19:03</view>
+        </view>
+       </view>
+       <!-- right -->
+      <image class="selectImg" src = "../../imgs/sangedain.png"></image>
+       </view>
+        <view class="postContent">
+        <text class="contentTitle">{{item.title}}</text>
+        <view class="shareContent">{{item.content}}</view>
+        <view class="shareImageBox">
+        <image wx:for = '{{item.imgs}}' key="index" class="shareImage" src = "{{item.src}}"></image>
+        </view>
+        <view class="comment-box">
+        <view class="comment-box-icon" bindtap="toNavigateRewardPrice">
+        <image class="comment-box-image" src = "../../imgs/reward.png"></image>
+        <text>打赏</text>
+        </view>
+        <!-- 评论 -->
+        <view class="comment-box-icon" bindtap="toNavigateCommentView">
+        <image class="comment-box-image" src = "../../imgs/comment.png"></image>
+        <text>4</text>
+        </view>
+        <view class="comment-box-icon">
+        <image class="comment-box-image" src = "../../imgs/awesome.png"></image>
+        <text>9</text>
+        </view>
+        </view>
+        <!-- 评论内容 -->
+        <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮。</view>           
+        </view>
+       </view>
+      </view>
+
+      <!-- 精华内容 -------------------------->
+      <view wx:if='{{listIdex==1}}'   class="essence-content">
+        <view class="post-content-box">
+       <view class="post-content-head">
+       <!-- left -->
+       <view class="postContentHeadLeft">
+       <image class="avatar" src = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3526260461,896251409&fm=26&gp=0.jpg"></image>
+       <view class="user-name"> 
+       <view class="user-name-top">
+       <text style="color:#4D587B">旅行菌</text>  <view class="user-grade">1v1</view>
+       </view>
+       <view class="user-name-bottom">07/31  19:03</view>
+        </view>
+       </view>
+       <!-- right -->
+      <image class="selectImg" src = "../../imgs/sangedain.png"></image>
+       </view>
+        <view class="postContent">
+        <text class="contentTitle">#旅行女子图鉴#</text>
+        <view class="shareContent">你好，世界！</view>
+        <view class="shareImageBox">
+        <image class="shareImage" src = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1024757237,230878305&fm=26&gp=0.jpg"></image>
+        </view>
+        <view class="comment-box">
+        <view class="comment-box-icon" bindtap="toNavigateRewardPrice">
+        <image class="comment-box-image" src = "../../imgs/reward.png"></image>
+        <text>打赏</text>
+        </view>
+        <view class="comment-box-icon" bindtap="toNavigateCommentView">
+        <image class="comment-box-image" src = "../../imgs/comment.png"></image>
+        <text>4</text>
+        </view>
+        <view class="comment-box-icon">
+        <image class="comment-box-image" src = "../../imgs/awesome.png"></image>
+        <text>9</text>
+        </view>
+        </view>
+        <!-- 评论内容 -->
+        <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮，是精华。</view>           
+        </view>
+       </view>
+      </view>
+       
+       <!-- 旅行攻略部分 --------------------------------->
+      <view wx:if='{{listIdex==2}}'>
+        <view class="post-content-box">
+       <view class="post-content-head">
+       <!-- left -->
+       <view class="postContentHeadLeft">
+       <image class="avatar" src = "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3526260461,896251409&fm=26&gp=0.jpg"></image>
+       <view class="user-name"> 
+       <view class="user-name-top">
+       <text style="color:#4D587B">你好，世界</text>  <view class="user-grade">1v1</view>
+       </view>
+       <view class="user-name-bottom">07/31  19:03</view>
+        </view>
+       </view>
+       <!-- right -->
+      <image class="selectImg" src = "../../imgs/sangedain.png"></image>
+       </view>
+        <view class="postContent">
+        <text class="contentTitle">#旅行攻略#</text>
+        <view class="shareContent">你好，世界！</view>
+        <view class="shareImageBox">
+        <image class="shareImage" src = "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1024757237,230878305&fm=26&gp=0.jpg"></image>
+        </view>
+        <view class="comment-box">
+        <view class="comment-box-icon" bindtap="toNavigateRewardPrice">
+        <image class="comment-box-image" src = "../../imgs/reward.png"></image>
+        <text>打赏</text>
+        </view>
+        <view class="comment-box-icon" bindtap="toNavigateCommentView">
+        <image class="comment-box-image" src = "../../imgs/comment.png"></image>
+        <text>4</text>
+        </view>
+        <view class="comment-box-icon">
+        <image class="comment-box-image" src = "../../imgs/awesome.png"></image>
+        <text>9</text>
+        </view>
+        </view>
+        <!-- 评论内容 -->
+        <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮，是精华。</view>           
+        </view>
+       </view>
+
+      </view>
+
+         
+    </view>
+  <!-- 分隔线旅行 以下是活跃页面部分----->
+  <!-- 第一名 -->
+  <view wx:if = '{{line==1}}' class="active-box">
+  <view class="leaderboard-box">
+  <view class="leaderboard-box-left">
+  <image class="leaderboardImage" src ="../../imgs/first.png" ></image>
+  <image class="leaderboardImage02" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=374349455,4150733742&fm=26&gp=0.jpg"></image>
+  <view style="color:#4D587B">李华</view> <view class="user-grade">1v3</view>
+  </view>
+  <view class="leaderboard-box-right"> <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image> </view>
+  </view>
+  <!-- 第二名 -->
+  <view class="leaderboard-box">
+  <view class="leaderboard-box-left">
+  <image class="leaderboardImage" src ="../../imgs/second.png" ></image>
+  <image class="leaderboardImage02" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1224896592,1288012954&fm=26&gp=0.jpg"></image>
+  <view style="color:#4D587B">小明</view> <view class="user-grade">1v2</view>
+  </view>
+  <view class="leaderboard-box-right"> <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image> </view>
+  </view>
+  <!-- 第三名 -->
+  <view class="leaderboard-box">
+  <view class="leaderboard-box-left">
+  <image class="leaderboardImage" src ="../../imgs/three.png" ></image>
+  <image class="leaderboardImage02" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1372494972,1692060958&fm=26&gp=0.jpg"></image>
+  <view style="color:#4D587B">小李</view> <view class="user-grade">1v1</view>
+  </view>
+  <view class="leaderboard-box-right"> <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image> </view>
+  </view>
+  <!-- 第四名过后-->
+  <view wx:for = '{{arrayRank}}' class="leaderboard-box">
+  <view class="leaderboard-box-left">
+  <text class="Rank-text">{{4+index}}</text>
+  <image class="leaderboardImage02" src='{{item.src}}'></image>
+  <view style="color:#4D587B">{{item.name}}</view> <view class="user-grade">1v1</view>
+  </view>
+  <view class="leaderboard-box-right"> <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image> </view>
+  </view>
+
+  </view>
+<!-- 分割线 -->
+</view>
+ 
+</view>
+
+ 

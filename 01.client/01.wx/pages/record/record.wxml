@@ -1,0 +1,58 @@
+<!--pages/record/record.wxml-->
+<view class="recordView">
+  <view class="title">
+    <view class="titleItem" wx:for="{{titles}}" wx:key="index" wx:for-item="title">
+      <view class="titleItemBox" bindtap='onChange' data-indexs="{{index}}">
+        <view class='{{indexSelect==index ? "selectName":"nomalName"}}'>{{title.name}}</view>
+        <view class="line" wx:if="{{indexSelect==index}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 打卡内容 -->
+  <view class="viewContent " wx:if="{{indexSelect==0}}" style="height:{{windowHeight}}">
+    <view class="content" style="background-image: url({{backgrandImg}})">
+      <view class="contentItem">
+        <view class="circle">
+          <image src="{{headImg}}" class="circle"></image>
+        </view>
+        <span class="word">生命不是要超越别人，而是要超越自己。</span>
+      </view>
+      <view class="contentItem ">
+      <view class="contentItem" wx:for="{{rankIcon}}" wx:key="index" wx:for-item="rankIcon">
+      <view class="circleSite">
+          <image src="{{rankIcon.url}}" class="icon"  bindtap="changeBackImg" data-id="{{rankIcon.id}}"></image>
+        </view>
+        </view>
+      </view>
+    </view>
+    <view class="text">打卡生成图片</view>
+  </view>
+  <!-- 足迹内容 -->
+  <view class="viewContent" wx:if="{{indexSelect==1}}" style="height:{{windowHeight}}">
+    <view class="footprintContent">
+      <image src="{{footprintImg}}"></image>
+    </view>
+  </view>
+
+
+  <!-- 排名内容 -->
+  <view class="viewContent" wx:if="{{indexSelect==2}}" style="height:{{windowHeight}}">
+    <view class="rankingContentImg">
+      <image src="../imgs/3.jpg" bindtap="getHeight"></image>
+    </view>
+
+    <scroll-view style='width:750rpx;height:600rpx;' scroll-y="true">
+    <view wx:for = '{{ranks}}' wx:key="index" wx:for-item="rank" class="shareImage">
+      <div class="contentBox">
+        <view class="leftBox">
+          <span class="number">{{rank.rank}}</span>
+          <image src="{{rank.url}}" class="personImg"></image>
+          <span class="personName">{{rank.name}}</span>
+        </view>
+        <view class="amount">{{rank.count}}次</view>
+      </div>
+      </view>
+    </scroll-view>
+  </view>
+</view>
