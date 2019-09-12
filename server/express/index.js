@@ -28,8 +28,8 @@ app.all("*", function(req, res, next) {
   });
 
 // 避免ip地址发生变化，所以先定义一个变量
-let ip = "http://192.168.3.86:";
-let port = 8888;
+let ip = "http://192.168.3.192:";
+let port = 8666;
 let PostController = require("./controller/PostController");
 
 app.get('/tourism',  new PostController().PostRespanse);
@@ -39,6 +39,9 @@ let HotRankController = require("./controller/HotRankController");
 let hotRankController = new HotRankController();
 app.get('/hotrank', hotRankController.PostRespanse);
 
+
+let pageController = require("./controller/PageController");
+app.get("/page", pageController.index);
 // 端口监听
 app.listen(port, function(){
     console.log("启动");

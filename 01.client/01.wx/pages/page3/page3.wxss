@@ -174,13 +174,6 @@
   margin-left: 80rpx;
   color: #444444;
 }
-
-.item3 .img1{
-  width: 60rpx;
-  height:60rpx;
-  margin-left: -20rpx;
-  margin-top: 10rpx;
-}
 .item4{
   width: 750rpx;
   height:180rpx;

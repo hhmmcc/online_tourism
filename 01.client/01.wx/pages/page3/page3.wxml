@@ -4,16 +4,16 @@
     <image src="../imgs/img07.jpg"></image>
    </view>
    <view class="contentItem" bindtap="toPersonalCenter">个人中心</view>
-   <view class="contentItem2">deft</view>
+   <view class="contentItem2" wx:for="{{user}}" wx:for-item="user"wx:key="id">{{user.name}}</view>
    <view class="contentItem3">
-    <view class="item">
-     <view  bindtap="toPersonalCenter">微帖</view>
-     <view>66</view>
+    <view class="item" wx:for="{{post}}"wx:for-item="post"wx:key="id">
+     <view  bindtap="toPersonalCenter">{{post.title}}</view>
+     <view>{{post.number}}</view>
     </view>
     <view class="item1"></view>
-    <view class="item">
-     <view bindtap="toWallet">钱包</view>
-     <view>￥998</view>
+    <view class="item"wx:for="{{money}}"wx:for-item="money"wx:key="id">
+     <view bindtap="toWallet">{{money.title}}</view>
+     <view>￥{{money.price}}</view>
     </view>
    </view>
   </view>
@@ -31,32 +31,22 @@
   <view class="content">
    <view class="item1">我的</view>
    <view class="item2"></view>
+
    <view class="item3">
-    <view>
-     <image class="img"src="../imgs/img10.png"></image>
-     <view class="text">我的评论</view>
-    </view>
-    <view>
-     <image class="img1"src="../imgs/img11.png"></image>
-     <view class="text1">我的点赞</view>
-    </view>
-    <view>
-     <image class="img1"src="../imgs/img12.png"></image>
-     <view class="text1">我的收藏</view>
-    </view>
-    <view>
-     <image class="img1"src="../imgs/img13.png"></image>
-     <view class="text1">我的关注</view>
+    <view wx:for="{{mine}}" wx:for-item="mine" wx:key="id">
+     <image class="img" src="{{mine.url}}"></image>
+     <view class="text">{{mine.title}}</view>
     </view>
    </view>
   </view>
+
   <view class="content">
    <view class="item1">发现</view>
    <view class="item2"></view>
    <view class="item4">
-    <view>
-     <image class="img"src="../imgs/img14.png"></image>
-     <view class="text">社区活动</view>
+    <view  wx:for="{{find}}"wx:for-item="find" wx:key="id">
+     <image class="img"src="{{find.url}}"></image>
+     <view class="text">{{find.title}}</view>
     </view>
    </view>
   </view>
@@ -64,13 +54,9 @@
    <view class="item1">设置</view>
    <view class="item2"></view>
    <view class="item4">
-    <view>
-     <image class="img2"src="../imgs/img15.png"></image>
-     <view class="text">基础设置</view>
-    </view>
-     <view>
-     <image class="img2"src="../imgs/img16.png"></image>
-     <view class="text2">投诉</view>
+    <view  wx:for="{{setUp}}"wx:for-item="set" wx:key="id">
+     <image class="img2"src="{{set.url}}"></image>
+     <view class="text">{{set.title}}</view>
     </view>
    </view>
   </view>

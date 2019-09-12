@@ -15,7 +15,7 @@ Page({
   onLoad: function (option) {
     var that = this;
     wx.request({
-      url: 'http://192.168.3.86:8888/tourism',
+      url: 'http://localhost:8666/tourism',
       success:function(res){
       console.log(res.data.data);
         that.setData({
