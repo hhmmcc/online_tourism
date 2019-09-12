@@ -17,8 +17,9 @@ Page({
     wx.request({
       url: 'http://192.168.3.86:8888/tourism',
       success:function(res){
+      console.log(res.data.data);
         that.setData({
-          topcisContent: res.data,
+          topcisContent: res.data.data,
         });
         app.globalData.topcisContent = res.data;
       }

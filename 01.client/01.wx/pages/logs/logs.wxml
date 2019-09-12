@@ -117,7 +117,7 @@
         </view>
         </view>
         <!-- 评论内容 -->
-        <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮。</view>           
+        <view wx:for = "{{topcisContent[index2].topicContent[index].comment}}" class="conmentContent"><text style="color:blue">{{item. comment_user}}:</text>{{item.comment_content}}</view>           
         </view>
         
        </view>
@@ -161,7 +161,8 @@
         </view>
         </view>
         <!-- 评论内容 -->
-        <view class="conmentContent"><text style="color:blue">hmc:</text>图片很漂亮。</view>           
+        <view wx:for = "{{topcisContent[listIdex].topicContent[index].comment}}"  class="conmentContent">
+        <text style="color:blue">{{item.comment_user}}:</text>{{item.comment_content}}</view>           
         </view>
        </view>
 

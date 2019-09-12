@@ -14,7 +14,6 @@ class CommentModel extends SqlBase{
             }
              callBack(result);
         });
-
     }
 }
 module.exports = CommentModel;

@@ -31,8 +31,8 @@ app.all("*", function(req, res, next) {
 let ip = "http://192.168.3.86:";
 let port = 8888;
 let PostController = require("./controller/PostController");
-let postController = new PostController();
-app.get('/tourism', postController.PostRespanse);
+
+app.get('/tourism',  new PostController().PostRespanse);
 
 
 let HotRankController = require("./controller/HotRankController");
