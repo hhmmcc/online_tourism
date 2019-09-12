@@ -4,8 +4,7 @@ class GetTopicTitle{
     constructor(){}
     getTopicTitleDate(callBack){
         let topicContentModel = new TopicContentModel();
-        let topicTitleModel = new TopicTitleModel();
-        
+        let topicTitleModel = new TopicTitleModel();       
         topicTitleModel.getTopicTitle(function(topicTitle){
                 // 给每个对应的title赋相对应的内容运用for循环
           for(let i = 0; i<topicTitle.length; i++){

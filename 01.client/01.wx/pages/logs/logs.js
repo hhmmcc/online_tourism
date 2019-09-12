@@ -15,7 +15,7 @@ Page({
   onLoad: function (option) {
     var that = this;
     wx.request({
-      url: 'http://192.168.1.107:8888/tourism',
+      url: 'http://192.168.3.86:8888/tourism',
       success:function(res){
         that.setData({
           topcisContent: res.data,
@@ -24,7 +24,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://192.168.1.107:8888/hotrank',
+      url: 'http://192.168.3.86:8888/hotrank',
       success:function(res){
         that.setData({
           arrayRank:res.data,
