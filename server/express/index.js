@@ -28,7 +28,7 @@ app.all("*", function(req, res, next) {
   });
 
 // 避免ip地址发生变化，所以先定义一个变量
-let ip = "http://192.168.3.86:";
+let ip = "http://192.168.3.109:";
 let port = 8888;
 let PostController = require("./controller/PostController");
 let postController = new PostController();
@@ -38,6 +38,14 @@ app.get('/tourism', postController.PostRespanse);
 let HotRankController = require("./controller/HotRankController");
 let hotRankController = new HotRankController();
 app.get('/hotrank', hotRankController.PostRespanse);
+
+
+//打卡内容数据获取
+let IndexControllers = require("./controller/IndexControllers");
+app.get('/rank', IndexControllers.index);
+
+let LogsImgsController = require("./controller/LogsImgsController");
+app.get('/logs',LogsImgsController.imgs)
 
 // 端口监听
 app.listen(port, function(){

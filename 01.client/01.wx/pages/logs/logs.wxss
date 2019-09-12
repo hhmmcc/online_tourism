@@ -9,7 +9,6 @@
 .headerImg{
   width: 750rpx;
   height: 200rpx;
-  background-image:url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567592916616&di=756e2c99b8cac5ba18f95f510387987b&imgtype=0&src=http%3A%2F%2Fwww.79n.cn%2Fuploads%2Fallimg%2F130726%2F1-130H6212208.jpg");
   background-size: 100%;
   border-radius: 8rpx;
   color: white;
@@ -20,6 +19,18 @@
   justify-content: space-between;
   align-items: center;
   margin: 20rpx;
+}
+.iconBox .inforBox{
+  width: 100%;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  color: #5c5c5c;
+  background: white;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .iconBox .img1{
   width: 50rpx;
@@ -89,7 +100,6 @@
   height: 200rpx;
   margin: 20rpx;
   display: flex;
-  background-image: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1900356323,3585811647&fm=26&gp=0.jpg");
   background-size: 100%;
   border-radius: 8rpx;
   color: white;
@@ -298,9 +308,6 @@ width: 40rpx;
   height: 40rpx;
   margin-right: 20rpx;
 }
-.conmentContent{
-
-}
 
 /* 第二活跃页面 */
 .leaderboard-box{
@@ -337,4 +344,19 @@ width: 40rpx;
   font-weight: 400;
   margin-right: 20rpx;
 }
-
+.barrageBox{
+  width: 100%;
+  background: black;
+  font-size: 36rpx;
+  color: white;
+  position: relative;
+}
+.barrageBox .barrageBottom{
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  justify-content: space-between;
+}

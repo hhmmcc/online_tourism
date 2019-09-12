@@ -1,6 +1,7 @@
 Page({
   data: {
     windowHeight: null,
+    changeSaying:false,
     indexSelect: 0,
     titles: [],
     ranks: [],
@@ -53,9 +54,13 @@ Page({
         backgrandImg: this.data.imgs[i].url,
         i:i,
       });
+    }
+    if(index == 13){
+      this.setData({
+        changeSaying:true,
+      })
     }  
   },
-
 
   onChange: function(e) {
     let id = e.currentTarget.dataset.indexs;
@@ -65,7 +70,16 @@ Page({
   },
   getHeight: function(e) {
     console.log(e);
-  }
-
-
+  },
+  closeSayingBox: function () {
+    this.setData({
+      changeSaying: false,
+    })
+  },
+  backHomePage: function () {
+    wx.switchTab({
+      url: '../logs/logs',
+    });
+  },
+ 
 })

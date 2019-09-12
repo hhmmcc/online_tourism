@@ -26,14 +26,26 @@
         </view>
       </view>
     </view>
+    <view class="sayingBox" wx:if="{{changeSaying}}">
+    <view class="sayingBoxTitle">
+    <span class="icon" bindtap="closeSayingBox">+</span>
+    <span>更改语录</span>
+    </view>
+    <view>
+    <input maxlength="36" placeholder="把自己的语录写在打卡图上" focus="{{focus}}" class="input" type="text"/>
+    </view>
+    </view>
     <view class="text">打卡生成图片</view>
+     <view class="backHomePage" bindtap="backHomePage">返回首页</view>
   </view>
   <!-- 足迹内容 -->
   <view class="viewContent" wx:if="{{indexSelect==1}}" style="height:{{windowHeight}}">
     <view class="footprintContent">
       <image src="{{footprintImg}}"></image>
     </view>
+      <view class="backHomePage" bindtap="backHomePage">返回首页</view>
   </view>
+
 
 
   <!-- 排名内容 -->
