@@ -3,6 +3,7 @@ let SqlBase = require("./SqlBase");
 class TopicContentModel extends SqlBase{
     constructor(){
         super();
+        this.sqlBase = new SqlBase();
     }
     getTopicContentById(id,flag, callBack){
         let sql;
@@ -11,8 +12,7 @@ class TopicContentModel extends SqlBase{
         }else{
             sql = `select * from topics_content where id=${id}`;
         }
-        let sqlBase = new SqlBase();
-        sqlBase.connection.query(sql, function(err, result){
+        this.sqlBase.connection.query(sql, function(err, result){
             if (err) {
                 console.log("[SELECT ERROR] - ", err.message);
                 return;

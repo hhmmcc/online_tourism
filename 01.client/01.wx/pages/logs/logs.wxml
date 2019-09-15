@@ -1,6 +1,6 @@
 <!--logs.wxml-->
 <view wx:if="{{!isShowBarrage}}">
-  <view class="header" >
+  <view class="header">
     <view class="headerImg" style="background-image: url({{imgs[6].url}})">
       <view class="iconBox">
         <image src="{{imgs[0].url}}" class="img1" wx:if="{{!show}}"></image>
@@ -112,8 +112,8 @@
                 </view>
               </view>
               <!-- 评论内容 -->
-              <view class="conmentContent">
-                <text style="color:blue">hmc:</text>图片很漂亮。</view>
+              <view wx:for="{{topcisContent[index2].topicContent[index].comment}}" class="conmentContent">
+                <text style="color:blue">{{item. comment_user}}:</text>{{item.comment_content}}</view>
             </view>
 
           </view>
@@ -158,81 +158,82 @@
               </view>
             </view>
             <!-- 评论内容 -->
-            <view class="conmentContent">
-              <text style="color:blue">hmc:</text>图片很漂亮。</view>
+            <view wx:for="{{topcisContent[listIdex].topicContent[index].comment}}" class="conmentContent">
+              <text style="color:blue">{{item.comment_user}}:</text>{{item.comment_content}}</view>
           </view>
         </view>
-
+        <!-- 分割线 -->
       </view>
-
-      <!-- 分隔线旅行 以下是活跃页面部分----->
-      <!-- 第一名 -->
-      <view wx:if='{{line==1}}' class="active-box">
-        <view class="leaderboard-box">
-          <view class="leaderboard-box-left">
-            <image class="leaderboardImage" src="../../imgs/first.png"></image>
-            <image class="leaderboardImage02" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=374349455,4150733742&fm=26&gp=0.jpg"></image>
-            <view style="color:#4D587B">李华</view>
-            <view class="user-grade">1v3</view>
-          </view>
-          <view class="leaderboard-box-right">
-            <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image>
-          </view>
-        </view>
-        <!-- 第二名 -->
-        <view class="leaderboard-box">
-          <view class="leaderboard-box-left">
-            <image class="leaderboardImage" src="../../imgs/second.png"></image>
-            <image class="leaderboardImage02" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1224896592,1288012954&fm=26&gp=0.jpg"></image>
-            <view style="color:#4D587B">小明</view>
-            <view class="user-grade">1v2</view>
-          </view>
-          <view class="leaderboard-box-right">
-            <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image>
-          </view>
-        </view>
-        <!-- 第三名 -->
-        <view class="leaderboard-box">
-          <view class="leaderboard-box-left">
-            <image class="leaderboardImage" src="../../imgs/three.png"></image>
-            <image class="leaderboardImage02" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1372494972,1692060958&fm=26&gp=0.jpg"></image>
-            <view style="color:#4D587B">小李</view>
-            <view class="user-grade">1v1</view>
-          </view>
-          <view class="leaderboard-box-right">
-            <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image>
-          </view>
-        </view>
-        <!-- 第四名过后-->
-        <view wx:for='{{arrayRank}}' class="leaderboard-box">
-          <view class="leaderboard-box-left">
-            <text class="Rank-text">{{4+index}}</text>
-            <image class="leaderboardImage02" src='{{item.topicContent[0].head_img}}'></image>
-            <view style="color:#4D587B">{{item.topicContent[0].user_name}}</view>
-            <view class="user-grade">1v1</view>
-          </view>
-          <view class="leaderboard-box-right">
-            <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image>
-          </view>
-        </view>
-
-      </view>
-      <!-- 分割线 -->
     </view>
   </view>
-</view>
- <!-- 弹幕框 -->
-  <view class="barrageBox" style="height:{{windowHeight}}" wx:if="{{isShowBarrage}}">
-  123564789
-  <view wx:for="{{barrage}}" wx:key="index" wx:for-item="content"> {{content.content}}</view>
-    <!-- <view wx:for='{{topcisContent}}' wx:key="index">
-      <view wx:for='{{topcisContent[index].topicContent}}' wx:for-item="content" wx:key="contentIndex">
-        <view class="barrage-text" style="color:{{textColor}};left:{{item.barrage_phoneWidth}}rpx;top:{{item.barrageText_height}}rpx;"> {{content[contentIndex].content}} 123</view>
+
+  <!-- 分隔线旅行 以下是活跃页面部分----->
+  <!-- 第一名 -->
+  <view wx:if='{{line==1}}' class="active-box">
+    <view class="leaderboard-box">
+      <view class="leaderboard-box-left">
+        <image class="leaderboardImage" src="../../imgs/first.png"></image>
+        <image class="leaderboardImage02" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=374349455,4150733742&fm=26&gp=0.jpg"></image>
+        <view style="color:#4D587B">李华</view>
+        <view class="user-grade">1v3</view>
       </view>
-    </view> -->
-<!-- 关闭弹幕 -->
-<view class="barrageBottom">
-<view >我要参与</view>
-<view bindtap="closeBarrage">关闭弹幕</view>
+      <view class="leaderboard-box-right">
+        <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image>
+      </view>
+    </view>
+    <!-- 第二名 -->
+    <view class="leaderboard-box">
+      <view class="leaderboard-box-left">
+        <image class="leaderboardImage" src="../../imgs/second.png"></image>
+        <image class="leaderboardImage02" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1224896592,1288012954&fm=26&gp=0.jpg"></image>
+        <view style="color:#4D587B">小明</view>
+        <view class="user-grade">1v2</view>
+      </view>
+      <view class="leaderboard-box-right">
+        <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image>
+      </view>
+    </view>
+    <!-- 第三名 -->
+    <view class="leaderboard-box">
+      <view class="leaderboard-box-left">
+        <image class="leaderboardImage" src="../../imgs/three.png"></image>
+        <image class="leaderboardImage02" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1372494972,1692060958&fm=26&gp=0.jpg"></image>
+        <view style="color:#4D587B">小李</view>
+        <view class="user-grade">1v1</view>
+      </view>
+      <view class="leaderboard-box-right">
+        <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image>
+      </view>
+    </view>
+    <!-- 第四名过后-->
+    <view wx:for='{{arrayRank}}' class="leaderboard-box">
+      <view class="leaderboard-box-left">
+        <text class="Rank-text">{{4+index}}</text>
+        <image class="leaderboardImage02" src='{{item.topicContent[0].head_img}}'></image>
+        <view style="color:#4D587B">{{item.topicContent[0].user_name}}</view>
+        <view class="user-grade">1v1</view>
+      </view>
+      <view class="leaderboard-box-right">
+        <image class="leaderboardImage02" src="../../imgs/rightarrow.png"></image>
+      </view>
+    </view>
+    <!-- 分割线 -->
 </view>
-  </view>
+ </view>
+
+    <!-- 弹幕框 -->
+    <view class="barrageBox" style="height:{{windowHeight}}" wx:if="{{isShowBarrage}}">
+      <view wx:for="{{topcisContent}}" wx:key="index" wx:for-item="contents"> 
+      <view wx:for="{{contents.topicContent}}" wx:key="contentIndex" wx:for-item="text"
+     style="color:{{textColor}};left:{{textWidth}}rpx;top:{{item.barrageText_height}}px;"
+      >
+      {{text.user_name}}:{{text.content}}
+      </view>
+     </view>          
+      <!-- 关闭弹幕 -->
+      <view class="barrageBottom">
+        <view>我要参与</view>
+        <view bindtap="closeBarrage">关闭弹幕</view>
+      </view>
+    </view>
+ 

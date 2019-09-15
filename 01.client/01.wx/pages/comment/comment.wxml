@@ -7,10 +7,10 @@
 <view class="comment-content-imput">
 <input type="text" name="commenttext" placeholder='写评论' value='{{keyValue}}' class="input-style" />
 <view class="commentText">
-<image class="commentUser" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3514131840,1568589023&fm=26&gp=0.jpg"></image>
+<image class="commentUser" src="{{contentImag}}"></image>
 <view class="userPostMessege">
-<view class="connectUser">@刘闯</view>
-<text>不够优秀，才会那么依赖其他人...</text>
+<view class="connectUser">@{{user_name}}</view>
+<text class="connectUserContent">{{userContent}}</text>
 </view>
 </view>
 </view>

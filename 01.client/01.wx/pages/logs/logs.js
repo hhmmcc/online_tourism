@@ -6,7 +6,7 @@ Page({
     isShow: false,
     isShowBarrage: false,
     textColor:"white",
-    barrage:[],
+    barrageText:[],
     line: 0,
     listIdex: 0,
     arrayRank:[],
@@ -22,11 +22,21 @@ Page({
     wx.request({
       url: 'http://192.168.3.109:8888/tourism',
       success:function(res){
+        app.globalData.topcisContent = res.data.data; 
+        
+        let buffer = [];
+        for (let i = 0; i < res.data.data.length;i++){
+          let texts = res.data.data[i].topicContent;
+          console.log(texts)
+          for (let j = 0; j < texts.length;j++){
+            buffer.push(texts[j]);
+          }
+        }
         that.setData({
-          topcisContent: res.data,
+          topcisContent: res.data.data,
+          barrageText: buffer
         });
-        app.globalData.topcisContent = res.data;
-        console.log(that.data.topcisContent)
+
       }
     })
     wx.request({
@@ -41,7 +51,6 @@ Page({
     wx.request({
       url: 'http://192.168.3.109:8888/logs',
       success: function (res) {
-        console.log(res);
         that.setData({
           imgs:res.data,
         })
@@ -121,8 +130,8 @@ Page({
     this.setData({
       isShowBarrage:true,
     });
-    //打开定时器
-    // timer = setInterval(this.barrageText_move, 800),
+    // //打开定时器
+    // // timer = setInterval(this.barrageText_move, 800),
       this.data.textColor = "rgb(" + parseInt(Math.random() * 256) + "," + parseInt(Math.random() * 256) + "," + parseInt(Math.random() * 256) + ")";
     // //设置弹幕字体的水平位置样式
     // var textWidth = -(this.data.bind_shootValue.length*0);
@@ -132,26 +141,19 @@ Page({
 
 
   barrageText_move:function(){
-    let topcisContent = this.data.topcisContent;
+    let barrageText = this.data.barrageText;
     let barrage_content=[];
 //获得每个人的评论内容
-    for (let i = 0; i < topcisContent.length;i++){
-      let text_content = topcisContent[i].topicContent;
-      for (let j = 0; j < text_content.length;j++){
-        barrage_content.push = text_content[j].content;
-      }
+    for (let i = 0; i < barrageText.length;i++){
+      let user_content = `${barrageText[i].user_name}:${barrageText[i].content}`;
+      barrage_content.push(user_content);
     }
+    console.log(userContentBox);
 
-this.setData({
-  barrage: barrage_content
-})
-
-// //设置每个评论出现的位置
-//     let textMove = barrage_style_arr[i].barrage_phoneWidth;
-//     for (let index = 0; index < barrage_content.length;index++){
-//       textMove = barrage_content[index].length;
-
-//     }
+//设置每个评论出现的位置
+    for (let index = 0; index < barrage_content.length;index++){
+      textMove = barrage_content[index].length;
+    }
   
   },
 
@@ -161,7 +163,6 @@ this.setData({
     this.setData({
       isShowBarrage: false,
     })
-    clearInterval(timer);
   },
 
 
