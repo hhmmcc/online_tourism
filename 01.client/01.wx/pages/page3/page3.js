@@ -19,7 +19,7 @@ Page({
   onLoad: function (options) {
     let that = this;
     wx.request({
-      url: 'http://192.168.3.109:8888/page',
+      url: 'http://192.168.1.107:8888/page',
       success: function (res) {
         if (res.statusCode == 200) {
           console.log(res);

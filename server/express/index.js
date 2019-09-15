@@ -29,7 +29,7 @@ app.all("*", function(req, res, next) {
 
 // 避免ip地址发生变化，所以先定义一个变量
 
-let ip = "http://192.168.3.109:";
+let ip = "http://192.168.1.107:";
 let port = 8888;
 
 let PostController = require("./controller/PostController");

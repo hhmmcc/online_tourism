@@ -20,7 +20,7 @@ Page({
   onLoad: function (option) {
     var that = this;
     wx.request({
-      url: 'http://192.168.3.109:8888/tourism',
+      url: 'http://192.168.1.107:8888/tourism',
       success:function(res){
         app.globalData.topcisContent = res.data.data; 
         
@@ -40,7 +40,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://192.168.3.109:8888/hotrank',
+      url: 'http://192.168.1.107:8888/hotrank',
       success:function(res){
         that.setData({
           arrayRank:res.data,
@@ -49,7 +49,7 @@ Page({
     })
 
     wx.request({
-      url: 'http://192.168.3.109:8888/logs',
+      url: 'http://192.168.1.107:8888/logs',
       success: function (res) {
         that.setData({
           imgs:res.data,

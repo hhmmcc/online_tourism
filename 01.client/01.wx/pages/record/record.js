@@ -27,7 +27,7 @@ Page({
     });
 
     wx.request({
-      url: 'http://192.168.3.109:8888/rank',
+      url: 'http://192.168.1.107:8888/rank',
       success: function(res) {
         console.log(res);
         if (res.statusCode == 200) {
